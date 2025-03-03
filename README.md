@@ -55,6 +55,56 @@ $$\text{EER} = \frac{\text{制冷量}}{\text{输入电能}} = 4-6 \quad (\text{�
 
 ---
 
+## 考虑地源热泵对建筑园区的作用
+### **1. 冬季，地源热泵对建筑园区进行供暖**
+令 地源热泵供热的耗电功率为P_hp_g，热泵从土地吸热 $$\(g_{\text{ground}}\)$$ 并向建筑供热 $$\(g_{\text{hp}}\)$$。 
+
+**能量守恒方程**：  
+
+$$g_{\text{hp}} = g_{\text{ground}} + P_{\text{hp}_g}$$
+
+**定义**：供热性能系数（COP_g）  
+
+$$\text{COP}_g = \frac{g_{\text{hp}}}{P_{\text{hp}_g}} \quad \Rightarrow \quad g_{\text{hp}} = \text{COP}_g \cdot P_{\text{hp}_g}$$
+
+**推导**：
+
+$$g_{\text{ground}} = (\text{COP}_g - 1) \cdot P_{\text{hp}_g} = \left(1 - \frac{1}{\text{COP}_g}\right) \cdot g_{\text{hp}}$$ 
+
+#### **2. 夏季，地源热泵对建筑园区进行制冷**
+令 地源热泵制冷的耗电功率为P_hp_q，热泵从建筑吸热 $$\(q_{\text{hp}}\)$$ 并向土地排热 $$\(q_{\text{ground}}\)$$ 。等价于地源热泵从土地里提取的冷功率为q_ground,地源热泵给建筑园区的制冷功率为q_hp
+
+**能量守恒方程**：
+
+$$q_{\text{ground}} = q_{\text{hp}} + P_{\text{hp}_q}$$
+
+**定义**：制冷性能系数（COP_q）  
+
+$$\text{COP}_q = \frac{q_{\text{hp}}}{P_{\text{hp}_q}} \quad \Rightarrow \quad q_{\text{hp}} = \text{COP}_q \cdot P_{\text{hp}_q}$$
+
+**推导**：  
+
+$$q_{\text{ground}} = (\text{COP}_q + 1) \cdot P_{\text{hp}_q} = \left(1 + \frac{1}{\text{COP}_q}\right) \cdot q_{\text{hp}}$$
+
+#### **冬季供暖模式**
+\[
+\begin{cases}
+g_{\text{hp}} = \text{COP}_g \cdot P_{\text{hp}_g} \\
+g_{\text{ground}} = \left(1 - \frac{1}{\text{COP}_g}\right) \cdot g_{\text{hp}}
+\end{cases}
+\]
+
+#### **夏季制冷模式**
+\[
+\begin{cases}
+q_{\text{hp}} = \text{COP}_q \cdot P_{\text{hp}_q} \\
+q_{\text{ground}} = \left(1 + \frac{1}{\text{COP}_q}\right) \cdot q_{\text{hp}}
+\end{cases}
+\]
+
+***key: "制冷"等价于将热量从建筑园区中移动到土地中***
+---
+
 ## **二. 空气源热泵**
 
 ***key: 空气源热泵通过热力学循环（逆卡诺循环），利用电能驱动压缩机，将低温环境中的热量转移到高温区域。其核心部件包括 **蒸发器、压缩机、冷凝器、膨胀阀**，通过制冷剂的相变实现热量传递。***
