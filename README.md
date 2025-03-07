@@ -59,18 +59,18 @@ $$
 
 ## 考虑地源热泵对建筑园区的作用
 ### **1. 冬季，地源热泵对建筑园区进行供暖**
-令 地源热泵供热的耗电功率为P_hp_g，热泵从土地吸热 $$\g_{\text{ground}}\$$ 并向建筑供热 $$\g_{\text{hp}}\$$。 
+令 地源热泵供热的耗电功率为$P_g^{hp}$，热泵从土地吸热 $g_{\text{ground}}$ 并向建筑供热 $g_{\text{hp}}\$。 
 
 **能量守恒方程**：  
 
 $$
-g_{\text{hp}} = g_{\text{ground}} + P_{\text{hp}_g}
+g_{\text{hp}} = g_{\text{ground}} + P_g^{hp}
 $$
 
 **定义**：供热性能系数（COP_g）  
 
 $$
-\text{COP}_g = \frac{g_{\text{hp}}}{P_{\text{hp}_g}} \quad \Rightarrow \quad g_{\text{hp}} = \text{COP}_g \cdot P_{\text{hp}_g}
+COP_g = \frac{g_{\text{hp}}}{P_{\text{hp}_g}} \quad \Rightarrow \quad g_{\text{hp}} = \text{COP}_g \cdot P_{\text{hp}_g}
 $$
 
 **推导**：
