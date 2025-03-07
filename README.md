@@ -67,7 +67,7 @@ $$
 g_{\text{hp}} = g_{\text{ground}} + P_g^{hp}
 $$
 
-**定义**：供热性能系数（ $COP_g$ ）  
+**定义**：供热性能系数 $COP_g$   
 
 $$
 COP_g = \frac{g_{hp}}{P_g^{hp}}
