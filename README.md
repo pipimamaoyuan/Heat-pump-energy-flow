@@ -67,20 +67,21 @@ $$
 g_{\text{hp}} = g_{\text{ground}} + P_g^{hp}
 $$
 
-**定义**：供热性能系数（COP_g）  
+**定义**：供热性能系数（ $COP_g$ ）  
 
 $$
-COP_g = \frac{g_{\text{hp}}}{P_{\text{hp}_g}} \quad \Rightarrow \quad g_{\text{hp}} = \text{COP}_g \cdot P_{\text{hp}_g}
+COP_g = \frac{g_{hp}}}{P_{\text{hp}_g}} \quad \Rightarrow \quad g_{\text{hp}} = \text{COP}_g \cdot P_{\text{hp}_g}
 $$
 
 **推导**：
 
 $$
-g_{\text{ground}} = (\text{COP}_g - 1) \cdot P_{\text{hp}_g} = \left(1 - \frac{1}{\text{COP}_g}\right) \cdot g_{\text{hp}}
+g_{ground} = (COP_g - 1) \cdot P_{\text{hp}_g} = \left(1 - \frac{1}{\text{COP}_g}\right) \cdot g_{\text{hp}}
 $$ 
 
 #### **2. 夏季，地源热泵对建筑园区进行制冷**
-令 地源热泵制冷的耗电功率为P_hp_q，热泵从建筑吸热 $$\(q_{\text{hp}}\)$$ 并向土地排热 $$\(q_{\text{ground}}\)$$ 。等价于地源热泵从土地里提取的冷功率为q_ground,地源热泵给建筑园区的制冷功率为q_hp
+令 地源热泵制冷的耗电功率为 $P_q^{hp}$ ，热泵从建筑吸热 $q_{hp}$ 并向土地排热 
+ $q_{ground}$ 。等价于地源热泵从土地里提取的冷功率为 $q_{ground}$ ,地源热泵给建筑园区的制冷功率为 $q_{hp}$ 。
 
 **能量守恒方程**：
 
@@ -89,26 +90,26 @@ q_{\text{ground}} = q_{\text{hp}} + P_{\text{hp}_q}
 $$
 
 **定义**：制冷性能系数（COP_q）  
-$$
-\text{COP}_q = \frac{q_{\text{hp}}}{P_{\text{hp}_q}} \quad \Rightarrow \quad q_{\text{hp}} = \text{COP}_q \cdot P_{\text{hp}_q}
-$$
+\[
+COP_q = \frac{q_{hp}}{P_q^{hp}} \quad \Rightarrow \quad q_{hp} = COP_q \cdot P_q^{hp}
+\]
 
 **推导**：  
 
-$$
+\[
 q_{\text{ground}} = (\text{COP}_q + 1) \cdot P_{\text{hp}_q} = \left(1 + \frac{1}{\text{COP}_q}\right) \cdot q_{\text{hp}}
-$$
+\]
 
 #### **冬季供暖模式**
-$$
+\[
 \begin{cases}
 g_{\text{hp}} = \text{COP}_g \cdot P_{\text{hp}_g} \\
 g_{\text{ground}} = \left(1 - \frac{1}{\text{COP}_g}\right) \cdot g_{\text{hp}}
 \end{cases}
-$$
+\]
 
 #### **夏季制冷模式**
-
+\[
 \begin{cases}
 q_{\text{hp}} = \text{COP}_q \cdot P_{\text{hp}_q} \\
 q_{\text{ground}} = \left(1 + \frac{1}{\text{COP}_q}\right) \cdot q_{\text{hp}}
