@@ -73,15 +73,19 @@ $$
 COP_g = \frac{g_{hp}}{P_g^{hp}}
 $$
 
-**推导**：
+**则**：
 
 $$
 g_{ground} = (COP_g - 1) \cdot P_g^{hp}
 $$ 
 
+$$
+g_{ground} = (1 - \frac{1}{COP_g}) \cdot g_{hp}
+$$ 
+
 #### **2. 夏季，地源热泵对建筑园区进行制冷**
 令 地源热泵制冷的耗电功率为 $P_q^{hp}$ ，热泵从建筑吸热 $q_{hp}$ 并向土地排热 
- $q_{ground}$ 。等价于地源热泵从土地里提取的冷功率为 $q_{ground}$ ,地源热泵给建筑园区的制冷功率为 $q_{hp}$ 。
+ $q_{ground}$ 。等价于地源热泵从土地里提取的冷功率为 $q_{ground}$ , 地源热泵给建筑园区的制冷功率为 $q_{hp}$ 。
 
 **能量守恒方程**：
 
@@ -95,11 +99,15 @@ $$
 COP_q = \frac{q_{hp}}{P_q^{hp}} 
 $$
 
-**推导**：  
+**则**：  
 
-$$ 
-q_{\text{ground}} = (\text{COP}_q + 1) \cdot P_{\text{hp}_q} 
-$$ 
+$$  
+q_{ground} = (COP_q + 1) \cdot P_q^{hp} 
+$$
+
+$$  
+q_{ground} = (1 + \frac{1}{COP_q}) \cdot P_q^{hp} 
+$$
 
 ***key: "制冷"等价于将热量从建筑园区中移动到土地中***
 ---
