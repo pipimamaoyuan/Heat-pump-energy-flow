@@ -70,13 +70,13 @@ $$
 **定义**：供热性能系数（ $COP_g$ ）  
 
 $$
-COP_g = \frac{g_{hp}}}{P_{\text{hp}_g}} \quad \Rightarrow \quad g_{\text{hp}} = \text{COP}_g \cdot P_{\text{hp}_g}
+COP_g = \frac{g_{hp}}{P_g^{hp}}
 $$
 
 **推导**：
 
 $$
-g_{ground} = (COP_g - 1) \cdot P_{\text{hp}_g} = \left(1 - \frac{1}{\text{COP}_g}\right) \cdot g_{\text{hp}}
+g_{ground} = (COP_g - 1) \cdot P_g^{hp}
 $$ 
 
 #### **2. 夏季，地源热泵对建筑园区进行制冷**
@@ -90,31 +90,16 @@ q_{\text{ground}} = q_{\text{hp}} + P_{\text{hp}_q}
 $$
 
 **定义**：制冷性能系数（COP_q）  
-\[
-COP_q = \frac{q_{hp}}{P_q^{hp}} \quad \Rightarrow \quad q_{hp} = COP_q \cdot P_q^{hp}
-\]
+
+$$ 
+COP_q = \frac{q_{hp}}{P_q^{hp}} 
+$$
 
 **推导**：  
 
-\[
-q_{\text{ground}} = (\text{COP}_q + 1) \cdot P_{\text{hp}_q} = \left(1 + \frac{1}{\text{COP}_q}\right) \cdot q_{\text{hp}}
-\]
-
-#### **冬季供暖模式**
-\[
-\begin{cases}
-g_{\text{hp}} = \text{COP}_g \cdot P_{\text{hp}_g} \\
-g_{\text{ground}} = \left(1 - \frac{1}{\text{COP}_g}\right) \cdot g_{\text{hp}}
-\end{cases}
-\]
-
-#### **夏季制冷模式**
-\[
-\begin{cases}
-q_{\text{hp}} = \text{COP}_q \cdot P_{\text{hp}_q} \\
-q_{\text{ground}} = \left(1 + \frac{1}{\text{COP}_q}\right) \cdot q_{\text{hp}}
-\end{cases}
-\]
+$$ 
+q_{\text{ground}} = (\text{COP}_q + 1) \cdot P_{\text{hp}_q} 
+$$ 
 
 ***key: "制冷"等价于将热量从建筑园区中移动到土地中***
 ---
