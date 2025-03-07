@@ -90,7 +90,7 @@ $$
 **能量守恒方程**：
 
 $$
-q_{\text{ground}} = q_{\text{hp}} + P_{\text{hp}_q}
+q_{\text{ground}} = q_{\text{hp}} + P_q^{hp}
 $$
 
 **定义**：制冷性能系数（COP_q）  
@@ -106,7 +106,7 @@ q_{ground} = (COP_q + 1) \cdot P_q^{hp}
 $$
 
 $$  
-q_{ground} = (1 + \frac{1}{COP_q}) \cdot P_q^{hp} 
+q_{ground} = (1 + \frac{1}{COP_q}) \cdot q^{hp} 
 $$
 
 ***key: "制冷"等价于将热量从建筑园区中移动到土地中***
@@ -130,7 +130,10 @@ $$
 
 **能效比（COP）**： 
 
-$$\text{COP} = \frac{\text{供热量}}{\text{输入电能}} = 2.5-4 \quad (\text{1份电能可转移2.5-4份空气热能})$$  
+$$
+\text{COP} = \frac{\text{供热量}}{\text{输入电能}} = 2.5-4 \quad (\text{1份电能可转移2.5-4份空气热能})
+$$  
+
 **低温适应性**：  
 在极寒天气（如-20℃以下），需启动电辅热，导致效率下降（COP接近1）。
 
@@ -147,7 +150,10 @@ $$\text{COP} = \frac{\text{供热量}}{\text{输入电能}} = 2.5-4 \quad (\text
    - 制冷剂减压降温后回到初始状态，循环继续。
 
 **能效比（EER）**：  
-$$\text{EER} = \frac{\text{制冷量}}{\text{输入电能}} = 3-5 \quad (\text{效率高于传统空调})$$ 
+
+$$
+\text{EER} = \frac{\text{制冷量}}{\text{输入电能}} = 3-5 \quad (\text{效率高于传统空调})
+$$ 
 
 ### **3. 空气源热泵 vs 地源热泵：核心区别**
 
@@ -205,7 +211,9 @@ $$\text{EER} = \frac{\text{制冷量}}{\text{输入电能}} = 3-5 \quad (\text{�
 
 **能效比（COP）**：  
 
-$$\text{COP} = \frac{\text{高温供热量}}{\text{输入电能}} = 2-3 \quad (\text{1份电能可转移2-3份热能})$$
+$$
+\text{COP} = \frac{\text{高温供热量}}{\text{输入电能}} = 2-3 \quad (\text{1份电能可转移2-3份热能})
+$$
 
 **注**：高温输出时COP低于普通热泵（因需克服更大温差），但仍显著高于电直接加热（COP=1）。
 
@@ -278,7 +286,9 @@ $$\text{COP} = \frac{\text{高温供热量}}{\text{输入电能}} = 2-3 \quad (\
 
 **能效比（COP）**：  
 
-$$\text{COP} \approx 1.2-1.4 \quad (\text{1份热能产生1.2-1.4份冷量})$$
+$$
+\text{COP} \approx 1.2-1.4 \quad (\text{1份热能产生1.2-1.4份冷量})
+$$
 
 **优势**：两级热能利用，能效高，适合高温热源场景（如工业余热）。  
 
@@ -295,7 +305,9 @@ $$\text{COP} \approx 1.2-1.4 \quad (\text{1份热能产生1.2-1.4份冷量})$$
 
 **能效比（COP）**： 
 
-$$\text{COP} \approx 0.6-0.8 \quad (\text{1份热能产生0.6-0.8份冷量})$$
+$$
+\text{COP} \approx 0.6-0.8 \quad (\text{1份热能产生0.6-0.8份冷量})
+$$
 
 **特点**：结构简单、成本低，但能效仅为双效系统的约一半。  
 
