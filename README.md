@@ -403,31 +403,31 @@ $$
 
 $$
 \begin{cases}
-g_{k}^{ghp} = g_{k}^{ghp}\\
-p_{k}^{ghp} = p_{k}^{ghp} + k_{out}^{gtw}
+g_{k}^{ghp} = k_{k}^{ghp} \cdot p_{k}^{ghp} \\
+k_{k}^{ghp} = a + b \cdot t_k^{gtw,out}
 \end{cases}
 $$
 
-其中, $g_{k}^{ghp}$ 和 $p_{k}^{ghp}$ 分别表示地源热泵在 $k$ 时刻的产热量和耗电量; $k_{out}^{gtw}$ 表示制热效率系数，受到地热井出水温度 $t_{k}$ 的影响。
+其中, $g_{k}^{ghp}$ 和 $p_{k}^{ghp}$ 分别表示地源热泵在 $k$ 时刻的产热量和耗电量; $k_{k}^{ghp}$ 表示制热效率系数，受到地热井出水温度 $t_{k}^{gtw,out}$ 的影响。
 
 ### 3. 地热井换热模型
 地热井的换热过程涉及复杂的热力学过程，描述如下：
 
 $$
 \begin{cases}
-g_{k}^{gtw} = c_{m}^{fluid}(t_{out,k}^{gtw}-t_{in,k}^{gtw})\\
-t_{out,k}^{gtw} = t_{b,k}^{gtw} - k(t_{in,k}^{gtw}-t_{b,k}^{gtw})\\
-t_{b,k}^{gtw} = t_{b,k-1}^{gtw} - \frac{k}{cm_{fluid}}(t_{in,k}^{gtw}-t_{b,k-1}^{gtw})
+g_{k}^{gtw} = g_k^{ghp} - p_k^{ghp}\\
+g_{k}^{gtw} = c \cdot  m_{k}^{gtw} \cdot (t_{k}^{gtw,out}-t_{k}^{gtw,in})\\
+t_{k}^{gtw,out} =k_k^{fluid} \cdot (t_k^{gtw,in} - t_k^b) + t_k^b \\
 \end{cases}
 $$
 
-这里, $g_{k}^{gtw}$ 是地热井的换热量; $c_{m}^{fluid}$ 代表流体的质量; $t_{out,k}^{gtw}$ , $t_{in,k}^{gtw}$ 和 $t_{b,k}^{gtw}$ 分别为地热井出口温度、进口温度和地层基本温度; $k$ 是与流量相关的系数。
+这里, $g_{k}^{gtw}$ 是地热井的换热量; $m_{k}^{gtw}$ 代表地热井中流体的质量; $t_{k}^{gtw,out}$ , $t_{k}^{gtw,in}$ 和 $t_{k}^{b}$ 分别为地热井出口温度、进口温度和地层基本温度; $k_k^{b}$ 是与流量相关的系数。
 
 ### 4. 地层温度动态模型
 为了更准确地描述地层温度的动态变化，需要考虑所有过去与地热井换热行为对地层温度的累积效应。该过程由下式给出：
 
 $$
-t_{k}^{g} = t_{0}^{g} - \sum_{i=1}^{k}\frac{G(k-i)}{\pi\kappa nL}Q_{i}^{gtw}
+t_{k}^{b} = t^{g} - \sum_{i=1}^{k}\frac{G(k-i+1)}{2\pi\kappa nL}(g_{i}^{gtw} - g_{i-1}^{gtw})
 $$
 
-此式利用 G 函数进行卷积计算，描述了过去地热井换热对现在地温的影响。式中, $t_{0}^{g}$ 为地层初始温度, $\kappa$ 为地层的热导率, $n$ 为地热井的数量，$L$ 为地热井深度, $Q_{i}^{gtw}$ 为地热井在第 $i$ 时刻的换热量。
+此式利用 G 函数进行卷积计算，描述了过去地热井换热对现在地温的影响。式中, $t^{g}$ 为地层初始温度, $\kappa$ 为地层的热导率, $n$ 为地热井的数量，$L$ 为地热井深度, $g_{i}^{gtw}$ 为地热井在第 $i$ 时刻的换热量。
